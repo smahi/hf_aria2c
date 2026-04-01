@@ -1,9 +1,16 @@
 [project]
 name = "hf-aria2c"
 version = "0.1.0"
-description = "Add your description here"
+description = "Fast HuggingFace downloader using aria2"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = [
-    "huggingface-hub>=1.8.0",
+    "huggingface-hub>=0.23.0",
 ]
+
+[project.scripts]
+hf-aria2c = "hf_aria2c.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
